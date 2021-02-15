@@ -10,7 +10,7 @@ $url = $_POST['link'];
 
 //function who generated the random token
 function createToken() {
-    $chars = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!"#$%&.,*+/:;<=>?`'; 
+    $chars = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!"#$%&.,*+/:;<=>?`}{[]()~_^\|'; 
     $abbreviation = substr(str_shuffle($chars),0,5); 
     return $abbreviation;
 }
