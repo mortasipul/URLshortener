@@ -25,16 +25,16 @@
     $(document).ready(function(){
         $('#form_url').submit(function(e){
             // Store the url value from the form
-            var url = $(#url).val();
+            var url = $('#url').val();
             // Send the URL to the shorten.php script through POST
-            $.post('shorten.php', {link : url}, function(data){
+            $.post("shorten.php", {link : url}, function(data){
                 if (data == 'FALSE') {
                     $("#response").html("There was a problem shortening the URL");
                 } else {
                     $("#response").html("Here is the result: <a href=" + data + ">" + data + "</a>");
                 }
             }, "text"); 
-            //Prevent the form for actuallu submitting
+            //Prevent the form for actually submitting
             e.preventDefault();
         });
     });
