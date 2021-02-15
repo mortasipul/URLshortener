@@ -1,4 +1,6 @@
 <?php
+//Adding a service for localhost
+define("SERVICE","http://localhost/");
 
 //database connection
 $db = new mysqli("localhost","root","root","urls");
@@ -16,7 +18,7 @@ if($url) {
     if($stmt->num_rows == 1) {
         $stmt->bind_result($token);
         $stmt->fetch();
-        echo "http://localhost/".$token;
+        echo SERVICE.$token;
 
         //If it doesn't exist, generate a token
     } else {
@@ -26,7 +28,7 @@ if($url) {
         $stmt->bind_param('ss', $url, $token);  // s is the type of the variable introduced in the query, this time string
 
         if($stmt->execute()) {
-            echo "http://localhost/".$token; //generates new url
+            echo SERVICE.$token; //generates new url
         } else {
             printf('errno: %d, error: %s', $stmt->errno, $stmt->error);
             die; 
