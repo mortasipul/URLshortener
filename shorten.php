@@ -26,12 +26,13 @@ if($url) {
         $stmt->bind_param('ss', $url, $token);  // s is the type of the variable introduced in the query, this time string
 
         if($stmt->execute()) {
-            echo "http://localhost/".$token;
+            echo "http://localhost/".$token; //generates new url
         } else {
             printf('errno: %d, error: %s', $stmt->errno, $stmt->error);
             die; 
         }
     }
 } else {
-    echo "URL not received";
+    echo "FALSE";
 }
+
