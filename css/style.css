@@ -1,0 +1,21 @@
+.title {
+    font-weight: normal;
+}
+
+.container {
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+input {
+    padding: 15px;
+    background-color: aliceblue;
+    border: 1px solid #ccc;
+    margin: 5px;
+}
+
+input[type="url"] {
+    width: 300px;;
+}
