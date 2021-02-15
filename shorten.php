@@ -11,8 +11,8 @@ $url = $_POST['link'];
 //function who generated the random token
 function createToken() {
     $chars = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!"#$%&.,*+/:;<=>?`}{[]()~_^\|'; 
-    $abbreviation = substr(str_shuffle($chars),0,5); 
-    return $abbreviation;
+    $token = substr(str_shuffle($chars),0,5); 
+    return $token;
 }
 
 // The resolve if: takes the link, fragment it in 2 parts, check if the first part is the name of the server and the second one use it as a token to search in the database
