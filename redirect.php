@@ -1,4 +1,6 @@
 <?php
+//Adding a service for localhost
+define("SERVICE","http://localhost/");
 
 $db = new mysqli("localhost", "root", "root", "urls"); 
 
